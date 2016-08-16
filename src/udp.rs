@@ -75,7 +75,7 @@ impl UdpSocket {
                 Ok(n)
             }
             Ok(None) => {
-                self.source.unset_writable();
+                self.source.unset_readable();
                 Err(would_block())
             }
             Err(e) => {
